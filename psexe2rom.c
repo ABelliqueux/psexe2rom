@@ -126,12 +126,12 @@ int main (int argc, const char * argv[])
         {
             make512 = TRUE;
 
-            if(exe_size > EXE_MAX_256_CART)
+            if(exe_size < EXE_MAX_256_CART)
             {
                 make512 = FALSE;
                 make256 = TRUE;
 
-                if(exe_size > EXE_MAX_128_CART)
+                if(exe_size < EXE_MAX_128_CART)
                 {
                     make256 = FALSE;
                     make128 = TRUE;    
