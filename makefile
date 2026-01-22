@@ -1,10 +1,11 @@
 # PSEXE2ROM GNUMakeFile by Alex Free
 
 CC=gcc
+CCFLAGS=-std=c99
 VER=1.0.2
 
 psexe2rom: clean
-	$(CC) -Wall psexe2rom.c -o psexe2rom
+	$(CC) $(CCFLAGS) -Wall psexe2rom.c -o psexe2rom
 
 fedora-deps:
 	sudo dnf install zip gcc glibc-devel glibc-devel.i686 glibc-static glibc-static.i686 make mingw32-gcc mingw64-gcc
